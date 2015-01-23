@@ -15,7 +15,7 @@ When this commit SHA1 and date are included as const/static item in a c/c++ buil
 
 The vcs_track.h generated should be ignored by a projects version control system.
 
-## #scripts ##
+## Scripts ##
 * **vcs_track.sh**
 * **vcs_track.py**
 * **show\_alter\_versions.sh** - Displays git metadata for Altera projects fitting a particular structure.
