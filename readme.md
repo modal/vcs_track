@@ -11,7 +11,7 @@ The vcs_track.h generated should be ignored by a projects version control system
 
 ## Reference: (Similar Projects and Ideas) ##
 
-[cmakewith-git-metadata](https://github.com/pmirshad/cmake-with-git-metadata cmake-with-git-metadata)
+[cmakewith-git-metadata](https://github.com/pmirshad/cmake-with-git-metadata)
 
 [How can I get my C code to automatically print out its Git version hash?](http://stackoverflow.com/questions/1704907/how-can-i-get-my-c-code-to-automatically-print-out-its-git-version-hash)
 
