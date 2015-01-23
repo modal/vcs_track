@@ -12,7 +12,10 @@ The vcs_track.h generated should be ignored by a projects version control system
 ## Scripts ##
 * **vcs_track.sh**
 * **vcs_track.py**
-* **show\_alter\_versions.sh** - Displays git metadata for Altera projects fitting a particular structure.
+* **vcs_track_alt.sh** - Designed for Altera projects fitting a particular
+folder structure.
+
+* **show\_alter\_versions.sh** - Displays git metadata for Altera projects fitting a particular folder structure.  Does not write a header file.
 
 ## Reference: (Similar Projects and Ideas) ##
 
