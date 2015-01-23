@@ -4,10 +4,21 @@
 **VCS_TRACK** is a set of scripts that generate a c/c++ header file with the current git commit SHA1 and data.
 
 The script should be run as part of the pre-build steps prior to compiling the c/c++ code.
+# VCS_TRACK #
+
+## Description ##
+**VCS_TRACK** is a set of scripts that generate a c/c++ header file with the current git commit SHA1 and data.
+
+The script should be run as part of the pre-build steps prior to compiling the c/c++ code.
 
 When this commit SHA1 and date are included as const/static item in a c/c++ build, the source information used to generate that particular build can be referenced.
 
 The vcs_track.h generated should be ignored by a projects version control system.
+
+## #scripts ##
+* **vcs_track.sh**
+* **vcs_track.py**
+* **show\_alter\_versions.sh** - Displays git metadata for Altera projects fitting a particular structure.
 
 ## Reference: (Similar Projects and Ideas) ##
 
