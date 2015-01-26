@@ -37,7 +37,7 @@ function export_meta_data {
     echo $hash
     echo $date
     echo -e "#define VCS_TRACK_HASH_$1_$tpc \"$hash\"" >> $2
-    echo -e "#define VCS_TRACK_DATE_$1_$tpc \"$date\"" >> $2
+    echo -e "#define VCS_TRACK_DATE_$1_$tpc \"${date// /|}\"" >> $2
     label_arr[dircnt]="$1_$tpc"
     hash_arr[dircnt]=$hash
     date_arr[dircnt]=$date
@@ -91,7 +91,7 @@ echo "static VCS_TRACK_BUF_TYPE vcs_track_buffer[VCS_TRACK_COUNT] = {"  >> $f
 
 last_index=$(expr ${#hash_arr[@]} - 1)
 for((i=0; i < ${#hash_arr[@]}; i++)); do
-    printf "    {\"${hash_arr[$i]}\", \"${date_arr[$i]}\", \"${label_arr[$i]}\"}" >> $f
+    printf "    {\"${hash_arr[$i]}\", \"${date_arr[$i]// /|}\", \"${label_arr[$i]}\"}" >> $f
     if [ $i -eq $last_index ]; then
         printf "\n" >> $f
     else
