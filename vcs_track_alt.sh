@@ -30,7 +30,7 @@ date_arr=()
 
 function export_meta_data {
     tp=$(basename `pwd`)
-    tpc=$(echo $tp | awk '{print toupper($0)}') #Capitalize
+    tpc=$(echo $tp | awk '{print toupper($0)}') #Capitalize ==> assume Bash 3
     echo -e "${green}$1 ${tp}$endColor"
     hash=$(git rev-parse HEAD)
     date=$(git show -s --format=%ci)
@@ -73,17 +73,30 @@ for i in $(ls -1d */); do
     cd ..
 done;
 
+echo >> $f
 echo -e "#define VCS_TRACK_COUNT $dircnt" >> $f
 
 #for x in ${hash_arr[@]}; do
 #   echo $x
 #done
 
-echo >> $f
-echo "VCS_TRACK_BUF_TYPE vcs_track_buffer[VCS_TRACK_COUNT]={"  >> $f
+printf "\ntypedef struct VCS_TRACK_BUF_TYPE_STRUCT {\n" >> $f
+printf "    char *hash;\n" >> $f
+printf "    char *date;\n" >> $f
+printf "    char *label;\n" >> $f
+printf "} VCS_TRACK_BUF_TYPE;\n\n" >> $f
 
+echo "static VCS_TRACK_BUF_TYPE vcs_track_buffer[VCS_TRACK_COUNT] = {"  >> $f
+
+
+last_index=$(expr ${#hash_arr[@]} - 1)
 for((i=0; i < ${#hash_arr[@]}; i++)); do
-    echo -e "    \"${hash_arr[$i]}\", \"${date_arr[$i]}\", \"${label_arr[$i]}\"," >> $f
+    printf "    {\"${hash_arr[$i]}\", \"${date_arr[$i]}\", \"${label_arr[$i]}\"}" >> $f
+    if [ $i -eq $last_index ]; then
+        printf "\n" >> $f
+    else
+        printf ",\n" >> $f
+    fi
 done
 echo -e "};" >> $f
 
