@@ -32,6 +32,7 @@ function export_meta_data {
     tp=$(basename `pwd`)
     tpc=$(echo $tp | awk '{print toupper($0)}') #Capitalize ==> assume Bash 3
     echo -e "${green}$1 ${tp}$endColor"
+    git status --short #-uno
     hash=$(git rev-parse HEAD)
     date=$(git show -s --format=%ci)
     echo $hash
