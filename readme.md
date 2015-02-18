@@ -15,6 +15,8 @@ The vcs_track.h generated should be ignored by a projects version control system
 * **vcs_track_alt.sh** - Designed for Altera projects fitting a particular
 folder structure.
 
+* **vcs_label.py** - Labels Intel Hex Files with git commit date and SHA1.  It is geared towards TI Code Composer projects.
+
 * **show\_alter\_versions.sh** - Displays git metadata for Altera projects fitting a particular folder structure.  Does not write a header file.
 
 ## Reference: (Similar Projects and Ideas) ##
