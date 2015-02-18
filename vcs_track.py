@@ -22,6 +22,6 @@ f.write("//THIS FILE IS AUTO GENERATED\n")
 f.write("//DO NOT TRACK THIS FILE WITH THE VCS\n")
 f.write("#define VCS_TRACK_DATE " + "\"" + date_info + "\"\n")
 f.write("#define VCS_TRACK_HASH " + "\"" + hash_info.upper() + "\"\n")
-f.write("#endif")
+f.write("#endif\n")
 
 
