@@ -28,3 +28,7 @@ folder structure.
 [How can I get my C code to automatically print out its Git version hash?](http://stackoverflow.com/questions/1704907/how-can-i-get-my-c-code-to-automatically-print-out-its-git-version-hash)
 
 [Xcode: Insert Git Build Info Into iOS App](http://www.egeek.me/2013/02/09/xcode-insert-git-build-info-into-ios-app/)
+
+[git-show](http://git-scm.com/docs/git-show)
+
+[git-rev-parse](http://git-scm.com/docs/git-rev-parse)
