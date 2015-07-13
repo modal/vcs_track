@@ -9,6 +9,8 @@ When this commit SHA1 and date are included as const/static item in a c/c++ buil
 
 The vcs_track.h generated should be ignored by a projects version control system.
 
+If the author date is require instead of the commit date, the git-show script line should be altered.
+
 ## Scripts ##
 * **vcs_track.sh**
 * **vcs_track.py**
