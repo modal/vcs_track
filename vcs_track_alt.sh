@@ -62,7 +62,7 @@ cd ../../
 fpgadir=$(pwd)
 export_meta_data HW $f
 
-echo -e "${red}Altera Avalon IP$endColor"
+echo -e "${mag}Altera Avalon IP$endColor"
 cd ip
 ipdir=$(pwd)
 for i in $(ls -1d */); do
