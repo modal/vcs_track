@@ -7,9 +7,9 @@ The script should be run as part of the pre-build steps prior to compiling the c
 
 When this commit SHA1 and date are included as const/static item in a c/c++ build, the source information used to generate that particular build can be referenced.
 
-The vcs_track.h generated should be ignored by a projects version control system.
+The vcs_track.h file generated should be ignored by a project's version control system.
 
-If the author date is require instead of the commit date, the git-show script line should be altered.
+If the author date is required, instead of the commit date, the git-show script line should be altered.
 
 ## Scripts ##
 * **vcs_track.sh**
