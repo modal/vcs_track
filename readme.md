@@ -1,7 +1,7 @@
 # VCS_TRACK #
 
 ## Description ##
-**VCS_TRACK** is a set of scripts that generate a c/c++ header file with the current git commit SHA1 and data.
+**VCS_TRACK** is a set of scripts that generate a c/c++ header file with the current git commit SHA1 and date.
 
 The script should be run as part of the pre-build steps prior to compiling the c/c++ code.
 
