@@ -42,4 +42,4 @@ src="%s.hex" % sys.argv[1]
 dst="%s%s_%s.hex" % (sys.argv[1], date_info, hash_info)
 #os.rename(src, dst)                    #Rename doesn't leave a copy of original file
 #shutil.copyfile(src, dst)              #Retains copy, but changes metadata-date
-os.system("copy %s %s" % (src, dst))    #Retains metadata-date
+os.system("move %s %s" % (src, dst))    #Retains metadata-date
