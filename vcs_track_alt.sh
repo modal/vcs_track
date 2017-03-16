@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#set -ex
 ##############################################################################
 #VCS Track Altera Project Git Commit Metadata
 #
@@ -57,6 +57,11 @@ echo \/\/$timestamp >> $f
 
 echo -e "${green}${tp}$endColor"
 export_meta_data SW $f
+swdir=${PWD##*/}
+#The bsp directory label must be the the software directory with _bsp appended.
+bspdir="${swdir}_bsp"
+cd ../$bspdir
+export_meta_data BSP $f
 
 cd ../../
 fpgadir=$(pwd)
